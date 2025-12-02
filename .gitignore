@@ -2,10 +2,15 @@
 node_modules/
 vendor/
 
-# Environment
+# Environment - DŮLEŽITÉ!
 .env
-.env.local
-.env.*.local
+.env.*
+*.env
+*.env.*
+backend.env.example
+backend.env.local
+backend/.env
+backend/.env.*
 
 # Build files
 /frontend/dist/
@@ -43,3 +48,25 @@ yarn-error.log*
 *.tmp
 *.temp
 .phpunit.result.cache
+
+# Database backups
+*.sql
+*.sql.gz
+backup.sql
+
+# Uploaded files
+/backend/storage/app/public/uploads/
+
+# Environment files - NIKDY NENAHRÁVAT!
+.env
+.env.*
+*.env
+*.env.*
+backend.env.example
+backend.env.local
+backend/.env
+backend/.env.*
+
+# Database credentials
+*.sql
+backup.sql
