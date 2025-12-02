@@ -1,4 +1,45 @@
-node_modules
-vendor
-/backend/.env
-/frontend/build
+# Dependencies
+node_modules/
+vendor/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build files
+/frontend/dist/
+/frontend/build/
+/backend/public/hot
+/backend/public/storage
+/backend/storage/*.key
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Laravel
+/backend/bootstrap/cache/*
+/backend/storage/framework/cache/*
+/backend/storage/framework/sessions/*
+/backend/storage/framework/views/*
+/backend/storage/logs/*
+
+# Testing
+/backend/coverage/
+/frontend/coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.phpunit.result.cache
