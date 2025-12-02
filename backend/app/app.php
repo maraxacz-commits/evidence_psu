@@ -1,0 +1,1 @@
+<?php // Laravel app skeleton ?>
