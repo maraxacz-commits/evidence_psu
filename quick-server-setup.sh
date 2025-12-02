@@ -15,20 +15,6 @@ echo ""
 PROJECT_PATH=/home/html/maraxacz.savana-hosting.cz/public_html/pes
 cd $PROJECT_PATH
 
-# Dotaz na Git clone
-read -p "Chceš naklonovat z GitHubu? (y/n): " CLONE_GIT
-if [ "$CLONE_GIT" = "y" ]; then
-    echo "Klonuji repository..."
-    git clone https://github.com/maraxacz-commits/evidence_psu.git .
-    
-    if [ $? -ne 0 ]; then
-        echo "CHYBA: Git clone selhal!"
-        echo "Alternativa: Nahraj soubory přes FTP/SFTP"
-        exit 1
-    fi
-    echo "✓ Repository naklonován"
-fi
-
 # Kontrola Composeru
 echo ""
 echo "Kontrola Composeru..."
