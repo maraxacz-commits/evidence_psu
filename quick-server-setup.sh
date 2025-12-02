@@ -6,32 +6,13 @@
 echo "=== Quick Server Setup - Evidence psu ==="
 echo ""
 
-# Kontrola, že jsme na serveru
-if [ ! -d "/var/www" ]; then
-    echo "CHYBA: Tento skript je určen pro server (nenašel jsem /var/www)"
-    echo "Spusť tento skript přímo na VPS serveru přes SSH!"
-    exit 1
-fi
 
 # Zjištění aktuální složky
 CURRENT_DIR=$(pwd)
 echo "Aktuální složka: $CURRENT_DIR"
 echo ""
 
-# Dotaz na cestu k projektu
-read -p "Zadej cestu k projektu [/var/www/pes.maraxa.cz]: " PROJECT_PATH
-PROJECT_PATH=${PROJECT_PATH:-/var/www/pes.maraxa.cz}
-
-echo "Projekt bude v: $PROJECT_PATH"
-echo ""
-
-# Vytvoření složky pokud neexistuje
-if [ ! -d "$PROJECT_PATH" ]; then
-    echo "Vytvářím složku $PROJECT_PATH..."
-    sudo mkdir -p $PROJECT_PATH
-    sudo chown $USER:www-data $PROJECT_PATH
-fi
-
+PROJECT_PATH=/home/html/maraxacz.savana-hosting.cz/public_html/pes
 cd $PROJECT_PATH
 
 # Dotaz na Git clone
